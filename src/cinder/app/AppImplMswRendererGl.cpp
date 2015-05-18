@@ -201,7 +201,7 @@ bool AppImplMswRendererGl::initializeInternal( HWND wnd, HDC dc, HGLRC sharedRC 
 		0,											// No Accumulation Buffer
 		0, 0, 0, 0,									// Accumulation Bits Ignored
 		16,											// 32Bit Z-Buffer (Depth Buffer)  
-		0,											// No Stencil Buffer
+		8,											// 8bit Stencil Buffer
 		0,											// No Auxiliary Buffer
 		PFD_MAIN_PLANE,								// Main Drawing Layer
 		0,											// Reserved
@@ -287,7 +287,7 @@ int AppImplMswRendererGl::initMultisample( PIXELFORMATDESCRIPTOR pfd, int reques
 		WGL_COLOR_BITS_ARB,24,
 		WGL_ALPHA_BITS_ARB,8,
 		WGL_DEPTH_BITS_ARB,16,
-		WGL_STENCIL_BITS_ARB,0,
+		WGL_STENCIL_BITS_ARB,8,
 		WGL_DOUBLE_BUFFER_ARB,GL_TRUE,
 		WGL_SAMPLE_BUFFERS_ARB,GL_TRUE,
 		WGL_SAMPLES_ARB, 0,
